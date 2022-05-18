@@ -1,0 +1,11 @@
+from django.contrib import admin
+from .models import Snack
+
+# Register your models here.
+
+
+@admin.register(Snack)
+class AdminSnack(admin.ModelAdmin):
+    list_display = ["id", "title", "purchaser", "description"]
+    # list_filter = ("title", "purchaser", "description")
+    # search_fields = ("title", "purchaser", "description")
